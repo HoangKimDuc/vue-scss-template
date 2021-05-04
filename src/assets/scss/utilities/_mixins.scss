@@ -1,0 +1,5 @@
+@mixin d($key) {
+  @media #{map-get($map: $display-breakpoints, $key: $key)} {
+    @content;
+  }
+}

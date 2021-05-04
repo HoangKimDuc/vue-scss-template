@@ -1,0 +1,18 @@
+$breakpoints: (
+  // Mobile devices
+  "mobile": 480px,
+  // iPads, Tablets
+  "tablet": 768px,
+  // Small screens, laptops
+  "laptop": 1024px,
+  // Desktops, large screens
+  "desktop": 1200px,
+);
+
+$display-breakpoints:
+  (
+    'mobile': 'only screen and (max-width: #{map-get($breakpoints, 'mobile')})',
+    'tablet': 'only screen and (min-width: #{map-get($breakpoints, 'mobile') + 1}) and (max-width: #{map-get($breakpoints, 'tablet')})',
+    'laptop': 'only screen and (min-width: #{map-get($breakpoints, 'tablet') + 1}) and (max-width: #{map-get($breakpoints, 'laptop')})',
+    'desktop': 'only screen and (min-width: #{map-get($breakpoints, 'laptop') + 1})'
+);
